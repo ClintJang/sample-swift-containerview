@@ -10,13 +10,16 @@ Container View 3은 코드로 추가했습니다. 3은 제거하는 기능까지
 - 현재의 뷰 안에 컨트롤러를 연결 시킨 것과 다른 스토리보드의 파일을 링크 시킨 두가지 경우로 셈플링 하였습니다.
 
 ## 스토리보드 이미지
-<img width="739" height="499" src="/Image/image_storyboard_00.png"></img>
+<img width="628" height="631" src="/Image/image_storyboard_00.png"></img>
 
 ## 실행 이미지 (GIF)
 <img width="268" height="480" src="/Image/resultForImage.gif"></img>
 
 ## 실행 결과 계층 구조
-<img width="605" height="487" src="/Image/image_result_hierarchy.png"></img>
+- Container View 1,2를 스토리보드로 추가한 계층
+<img width="517" height="494" src="/Image/image_result_hierarchy00.png"></img>
+- Container View 3을 버튼을 눌러 코드로 추가한 계층
+<img width="482" height="499" src="/Image/image_result_hierarchy01.png"></img>
 
 ## 결과
 - Main.storyboard : 여기에 구성했습니다.
