@@ -17,9 +17,9 @@ Container View 3은 코드로 추가했습니다. 3은 제거하는 기능까지
 
 ## 실행 결과 계층 구조
 - Container View 1,2를 스토리보드로 추가한 계층
-<img width="517" height="494" src="/Image/image_result_hierarchy00.png"></img>
+<br /><img width="517" height="494" src="/Image/image_result_hierarchy00.png"></img><br />
 - Container View 3을 버튼을 눌러 코드로 추가한 계층
-<img width="482" height="499" src="/Image/image_result_hierarchy01.png"></img>
+<br /><img width="482" height="499" src="/Image/image_result_hierarchy01.png"></img><br />
 
 ## 결과
 - Main.storyboard : 여기에 구성했습니다.
