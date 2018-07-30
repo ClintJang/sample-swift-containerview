@@ -21,9 +21,11 @@ Container View 3은 코드로 추가했습니다. 3은 제거하는 기능까지
 - Container View 3을 버튼을 눌러 코드로 추가한 계층
 <br /><img width="482" height="499" src="/Image/image_result_hierarchy01.png"></img><br />
 
-## 결과
-- Main.storyboard : 여기에 구성했습니다.
-- Other.storyboard : 오른쪽의 두번째 Container View에 들어갈 RightViewController가 들어있습니다.
+## 결과 소스 및 파일
+> 실제 받아서 실행해 보셔요~
+
+- Main.storyboard : 여기에 기본 베이스 화면을 구성했습니다.
+- Other.storyboard : 오른쪽의 두번째 Container View에 들어갈 RightViewController가 들어있습니다. (Container View 2)
 - ViewController.swift : 가로 길이가 디바이스에 따라 변하게 하였고, 스크롤뷰의 이벤트 받는 부분을 살짝 추가해봤습니다. 
 ```swift 
 class ViewController: UIViewController {
