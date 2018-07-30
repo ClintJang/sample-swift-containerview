@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,6 +35,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tc-Nm-RNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="598" y="826"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="SGb-x4-uJF">
+            <objects>
+                <viewController storyboardIdentifier="AddViewController" id="zRD-0f-3yb" customClass="AddViewController" customModule="TestScrollViewAndContainerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uyf-cF-4Z5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e57-Xe-riz">
+                                <rect key="frame" x="67.5" y="316.5" width="239" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.88918973329999995" blue="0.766396776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Remove Child View Controller">
+                                    <color key="titleColor" red="0.53749519459999995" green="0.57863019950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRemoveChildViewController:" destination="zRD-0f-3yb" eventType="touchUpInside" id="GPJ-h1-0fK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e57-Xe-riz" firstAttribute="centerX" secondItem="uyf-cF-4Z5" secondAttribute="centerX" id="hqt-iA-IjJ"/>
+                            <constraint firstItem="e57-Xe-riz" firstAttribute="centerY" secondItem="uyf-cF-4Z5" secondAttribute="centerY" id="yRD-pS-2Dt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aMK-Jw-kru"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5u-LG-sSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1409" y="830"/>
         </scene>
     </scenes>
 </document>

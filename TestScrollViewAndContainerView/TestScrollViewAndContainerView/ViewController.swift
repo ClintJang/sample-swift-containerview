@@ -17,6 +17,22 @@ class ViewController: UIViewController {
         // Setting the ContainerView's width size for the ScrollView
         scrollViewContainerViewWidth.constant = UIScreen.main.bounds.size.width * 2
     }
+    
+    // addChildController
+    @IBAction func onAddChildController(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Other", bundle: nil)
+        let addViewController = storyboard.instantiateViewController(withIdentifier: "AddViewController")
+        // if Constraints
+//        addViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.addChildViewController(addViewController)
+        self.view.addSubview(addViewController.view)
+        
+        // if Constraints
+//        self.view.addConstraints(addViewController.view.constraints)
+        
+        addViewController.didMove(toParentViewController: self)
+    }
 }
 
 extension ViewController: UIScrollViewDelegate {

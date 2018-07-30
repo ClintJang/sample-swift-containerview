@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -99,6 +98,14 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="fEj-db-hOG"/>
                                         </connections>
                                     </scrollView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2o-j5-RXA" userLabel="addChildViewController Button">
+                                        <rect key="frame" x="230" y="15" width="137" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="add Child Controller"/>
+                                        <connections>
+                                            <action selector="onAddChildController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eEC-M6-Nyf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.88918973329999995" blue="0.766396776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC21B44B210EE63800B6124D /* Other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC21B44A210EE63800B6124D /* Other.storyboard */; };
+		BC21B44D210EFFD500B6124D /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21B44C210EFFD500B6124D /* AddViewController.swift */; };
 		BC61ECE621094C980051483A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61ECE521094C980051483A /* AppDelegate.swift */; };
 		BC61ECE821094C980051483A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61ECE721094C980051483A /* ViewController.swift */; };
 		BC61ECEB21094C980051483A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC61ECE921094C980051483A /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		BC21B44A210EE63800B6124D /* Other.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Other.storyboard; sourceTree = "<group>"; };
+		BC21B44C210EFFD500B6124D /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		BC61ECE221094C980051483A /* TestScrollViewAndContainerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestScrollViewAndContainerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC61ECE521094C980051483A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC61ECE721094C980051483A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				BC61ECE721094C980051483A /* ViewController.swift */,
 				BC61ECF72109533C0051483A /* LeftViewController.swift */,
 				BC61ECF92109534B0051483A /* RightViewController.swift */,
+				BC21B44C210EFFD500B6124D /* AddViewController.swift */,
 				BC61ECE921094C980051483A /* Main.storyboard */,
 				BC21B44A210EE63800B6124D /* Other.storyboard */,
 				BC61ECEC21094C9A0051483A /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC21B44D210EFFD500B6124D /* AddViewController.swift in Sources */,
 				BC61ECF82109533C0051483A /* LeftViewController.swift in Sources */,
 				BC61ECFA2109534B0051483A /* RightViewController.swift in Sources */,
 				BC61ECE821094C980051483A /* ViewController.swift in Sources */,
