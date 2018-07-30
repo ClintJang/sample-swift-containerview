@@ -13,6 +13,9 @@
 ## 실행 이미지 (GIF)
 <img width="268" height="480" src="/Image/resultForImage.gif"></img>
 
+## 실행 결과 계층 구조
+<img width="605" height="487" src="/Image/image_result_hierarchy.png"></img>
+
 ## 결과
 - Main.storyboard : 여기에 구성했습니다.
 - Other.storyboard : 오른쪽의 두번째 Container View에 들어갈 RightViewController가 들어있습니다.
