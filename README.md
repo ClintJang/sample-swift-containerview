@@ -27,6 +27,7 @@ Container View 3은 코드로 추가했습니다. 3은 제거하는 기능까지
 - Main.storyboard : 여기에 기본 베이스 화면을 구성했습니다.
 - Other.storyboard : 오른쪽의 두번째 Container View에 들어갈 RightViewController가 들어있습니다. (Container View 2)
 - ViewController.swift : 가로 길이가 디바이스에 따라 변하게 하였고, 스크롤뷰의 이벤트 받는 부분을 살짝 추가해봤습니다. 
+
 ```swift 
 class ViewController: UIViewController {
 
@@ -45,13 +46,13 @@ class ViewController: UIViewController {
         // if Constraints
 //        addViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        self.addChildViewController(addViewController)
+        self.addChild(addViewController)
         self.view.addSubview(addViewController.view)
         
         // if Constraints
 //        self.view.addConstraints(addViewController.view.constraints)
         
-        addViewController.didMove(toParentViewController: self)
+        addViewController.didMove(toParent: self)
     }
 }
 
@@ -63,12 +64,13 @@ extension ViewController: UIScrollViewDelegate {
     }
 }
 ```
+
 - LeftViewController.swift : 배경 컬러만 확인을 위해 수정했습니다.
 	- StoryBoard로 추가한 케이스 입니다.
 	- RightViewController.swift는 배경 색상만 달라서 별도 소스는 추가 안했습니다. 
+	
 ```swift
 class LeftViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,7 +79,7 @@ class LeftViewController: UIViewController {
     }
     
     // willMove -> It appears on the parent screen.
-    override func willMove(toParentViewController parent: UIViewController?) {
+    override func willMove(toParent parent: UIViewController?) {
         print(#function)
         if let `parent` = parent as UIViewController? {
             print(parent)   // TestScrollViewAndContainerView.ViewController
@@ -85,7 +87,7 @@ class LeftViewController: UIViewController {
     }
     
     // It appears on the parent screen. -> didMove
-    override func didMove(toParentViewController parent: UIViewController?) {
+    override func didMove(toParent parent: UIViewController?) {
         print(#function)
         if let `parent` = parent as UIViewController? {
             print(parent)
@@ -95,9 +97,9 @@ class LeftViewController: UIViewController {
 ```
 
 - AddViewController.swift : 코드 레벨로 Contrainer View를 추가했습니다. 
+
 ```swift
 class AddViewController: UIViewController {
-    
     deinit {
         // check remove self
         print(#function)
@@ -111,7 +113,7 @@ class AddViewController: UIViewController {
     }
     
     // willMove -> It appears on the parent screen.
-    override func willMove(toParentViewController parent: UIViewController?) {
+    override func willMove(toParent parent: UIViewController?) {
         print(#function)
         if let `parent` = parent as UIViewController? {
             print(parent)
@@ -119,7 +121,7 @@ class AddViewController: UIViewController {
     }
     
     // It appears on the parent screen. -> didMove
-    override func didMove(toParentViewController parent: UIViewController?) {
+    override func didMove(toParent parent: UIViewController?) {
         print(#function)
         if let `parent` = parent as UIViewController? {
             print(parent)
@@ -130,17 +132,17 @@ class AddViewController: UIViewController {
     @IBAction func onRemoveChildViewController(_ sender: Any) {
         // Notify the parent to remove it by calling willMove.
         // willMove 를 호출해서 제거한다는 것을 알립니다.
-        self.willMove(toParentViewController: nil)
+        self.willMove(toParent: nil)
         // Remove Constraint.
         // 제약사항 제거
         self.view.removeFromSuperview()
         // Remove the relationship of the child connected to the parent.
         // 부모에 연결된 자식의 관계를 제거합니다.
-        self.removeFromParentViewController()
+        self.removeFromParent()
     }
 }
-
 ```
+
 ## 추가 설명
 - 단순하게 addSubView를 하면 부모자식관계는 성립하지 않습니다.
 - addChildViewController를 이용해서 자식 컨트롤러를 추가합니다.

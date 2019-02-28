@@ -25,13 +25,13 @@ class ViewController: UIViewController {
         // if Constraints
 //        addViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        self.addChildViewController(addViewController)
+        self.addChild(addViewController)
         self.view.addSubview(addViewController.view)
         
         // if Constraints
 //        self.view.addConstraints(addViewController.view.constraints)
         
-        addViewController.didMove(toParentViewController: self)
+        addViewController.didMove(toParent: self)
     }
 }
 

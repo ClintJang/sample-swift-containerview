@@ -9,7 +9,6 @@
 import UIKit
 
 class AddViewController: UIViewController {
-    
     deinit {
         // check remove self
         print(#function)
@@ -23,7 +22,7 @@ class AddViewController: UIViewController {
     }
     
     // willMove -> It appears on the parent screen.
-    override func willMove(toParentViewController parent: UIViewController?) {
+    override func willMove(toParent parent: UIViewController?) {
         print(#function)
         if let `parent` = parent as UIViewController? {
             print(parent)
@@ -31,7 +30,7 @@ class AddViewController: UIViewController {
     }
     
     // It appears on the parent screen. -> didMove
-    override func didMove(toParentViewController parent: UIViewController?) {
+    override func didMove(toParent parent: UIViewController?) {
         print(#function)
         if let `parent` = parent as UIViewController? {
             print(parent)
@@ -42,12 +41,12 @@ class AddViewController: UIViewController {
     @IBAction func onRemoveChildViewController(_ sender: Any) {
         // Notify the parent to remove it by calling willMove.
         // willMove 를 호출해서 제거한다는 것을 알립니다.
-        self.willMove(toParentViewController: nil)
+        self.willMove(toParent: nil)
         // Remove Constraint.
         // 제약사항 제거
         self.view.removeFromSuperview()
         // Remove the relationship of the child connected to the parent.
         // 부모에 연결된 자식의 관계를 제거합니다.
-        self.removeFromParentViewController()
+        self.removeFromParent()
     }
 }

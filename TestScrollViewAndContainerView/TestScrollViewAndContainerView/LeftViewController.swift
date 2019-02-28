@@ -9,7 +9,6 @@
 import UIKit
 
 class LeftViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,7 +17,7 @@ class LeftViewController: UIViewController {
     }
     
     // willMove -> It appears on the parent screen.
-    override func willMove(toParentViewController parent: UIViewController?) {
+    override func willMove(toParent parent: UIViewController?) {
         print(#function)
         if let `parent` = parent as UIViewController? {
             print(parent)   // TestScrollViewAndContainerView.ViewController
@@ -26,7 +25,7 @@ class LeftViewController: UIViewController {
     }
     
     // It appears on the parent screen. -> didMove
-    override func didMove(toParentViewController parent: UIViewController?) {
+    override func didMove(toParent parent: UIViewController?) {
         print(#function)
         if let `parent` = parent as UIViewController? {
             print(parent)
